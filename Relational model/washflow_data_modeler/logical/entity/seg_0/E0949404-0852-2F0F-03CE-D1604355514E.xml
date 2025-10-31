@@ -1,0 +1,131 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E0949404-0852-2F0F-03CE-D1604355514E" name="customer">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 17:33:07 UTC</createdTime>
+<ownerDesignName>flow</ownerDesignName>
+<importedID>AF54EE1C-0079-27B2-F4DB-3E370C63836E</importedID>
+<engineerTo>
+<item key="904600AD-6F10-64FE-B674-3F3DB7B0FB04" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cust_ID" id="44C8F852-EDC2-53F1-AD77-BB41AAA9139C">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 17:33:07 UTC</createdTime>
+<ownerDesignName>flow</ownerDesignName>
+<importedID>87642FCB-0464-FE2D-B74F-F7B20A8CE460</importedID>
+<engineerTo>
+<item key="904600AD-6F10-64FE-B674-3F3DB7B0FB04" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cust_fname" id="033A402D-EA65-4274-7300-FB17F4A385A6">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 17:33:07 UTC</createdTime>
+<ownerDesignName>flow</ownerDesignName>
+<importedID>F60F9E4B-1725-8B54-0B5A-32EC7B6B0EEB</importedID>
+<engineerTo>
+<item key="904600AD-6F10-64FE-B674-3F3DB7B0FB04" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cust_lname" id="9CDAA691-74BB-C5D8-CEE6-784AD37040CA">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 17:33:07 UTC</createdTime>
+<ownerDesignName>flow</ownerDesignName>
+<importedID>A222ABE5-7F91-79EE-A11A-5AE3B769F952</importedID>
+<engineerTo>
+<item key="904600AD-6F10-64FE-B674-3F3DB7B0FB04" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cust_tel" id="AB6A9093-8C7A-AA75-F790-9CCAD2FA3F0B">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 17:33:07 UTC</createdTime>
+<ownerDesignName>flow</ownerDesignName>
+<importedID>9062BF14-299B-1C08-2791-619343A08562</importedID>
+<engineerTo>
+<item key="904600AD-6F10-64FE-B674-3F3DB7B0FB04" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cust_address" id="8D3F1700-34C7-1157-FC69-C68E33D97C91">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 17:33:07 UTC</createdTime>
+<ownerDesignName>flow</ownerDesignName>
+<importedID>87BBA21D-40B4-9151-BCA4-6537C735269C</importedID>
+<engineerTo>
+<item key="904600AD-6F10-64FE-B674-3F3DB7B0FB04" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cust_username" id="9FB59CAE-D6F4-D757-BF1A-772D48D4E0DD">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:17:49 UTC</createdTime>
+<ownerDesignName>flow</ownerDesignName>
+<engineerTo>
+<item key="904600AD-6F10-64FE-B674-3F3DB7B0FB04" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cust_password" id="714FAC2C-EED1-6FD9-B1C0-57C94AF05B72">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:18:45 UTC</createdTime>
+<ownerDesignName>flow</ownerDesignName>
+<engineerTo>
+<item key="904600AD-6F10-64FE-B674-3F3DB7B0FB04" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0DC792A8-752C-02D1-23C9-3DC9AB2727F3" name="customer PK">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 17:33:07 UTC</createdTime>
+<ownerDesignName>flow</ownerDesignName>
+<importedID>54223AAA-3A4D-3905-C6C1-6ADB9CA0715C</importedID>
+<engineerTo>
+<item key="904600AD-6F10-64FE-B674-3F3DB7B0FB04" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>44C8F852-EDC2-53F1-AD77-BB41AAA9139C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

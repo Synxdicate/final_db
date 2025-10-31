@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DD46AA88-9499-85B7-E409-54C73890E90F" name="Membership">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 17:33:07 UTC</createdTime>
+<ownerDesignName>flow</ownerDesignName>
+<importedID>3AC306CB-BEC0-2340-9651-D04EBF657EE7</importedID>
+<engineerTo>
+<item key="904600AD-6F10-64FE-B674-3F3DB7B0FB04" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Membership" id="89C2C470-2E31-EB09-BC93-00ECABA6E4FA">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 17:33:07 UTC</createdTime>
+<ownerDesignName>flow</ownerDesignName>
+<importedID>C1C91032-1DD4-858B-8A5F-C601ED44DAF2</importedID>
+<engineerTo>
+<item key="904600AD-6F10-64FE-B674-3F3DB7B0FB04" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="membership_name" id="365F6143-4A06-C074-8FB1-ED05A3795440">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 17:33:07 UTC</createdTime>
+<ownerDesignName>flow</ownerDesignName>
+<importedID>55CF079D-3CA1-3BF8-84A9-E6125CC626BE</importedID>
+<engineerTo>
+<item key="904600AD-6F10-64FE-B674-3F3DB7B0FB04" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="membership_description" id="74185768-7598-AA21-EA39-B612F9746507">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 17:33:07 UTC</createdTime>
+<ownerDesignName>flow</ownerDesignName>
+<importedID>53BFA0C4-8D24-7BEC-8C78-AE2D3C671FB2</importedID>
+<engineerTo>
+<item key="904600AD-6F10-64FE-B674-3F3DB7B0FB04" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="membership_point" id="D58EF37F-7E4B-4B35-0A25-EB9584A3FA21">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 17:33:07 UTC</createdTime>
+<ownerDesignName>flow</ownerDesignName>
+<importedID>59E3AB64-500D-A1CE-71AC-FCEA13A887F7</importedID>
+<engineerTo>
+<item key="904600AD-6F10-64FE-B674-3F3DB7B0FB04" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cust_ID" id="7492F9A8-41C1-6572-9B0A-51CC27471FE8">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 17:33:07 UTC</createdTime>
+<generatorID>ED38695A-DEFF-4A61-3F9B-C1A693B2C957</generatorID>
+<ownerDesignName>flow</ownerDesignName>
+<importedID>6DFA7BD4-3324-5669-90DC-968F8C5238C1</importedID>
+<engineerTo>
+<item key="904600AD-6F10-64FE-B674-3F3DB7B0FB04" value="true"/>
+</engineerTo>
+<referedAttribute>44C8F852-EDC2-53F1-AD77-BB41AAA9139C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="31CB2CE6-7A13-C148-5118-41ED256D32C0" name="Membership PK">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 17:33:07 UTC</createdTime>
+<ownerDesignName>flow</ownerDesignName>
+<importedID>2E45A41C-D86E-636E-BE87-44CBE360F649</importedID>
+<engineerTo>
+<item key="904600AD-6F10-64FE-B674-3F3DB7B0FB04" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>89C2C470-2E31-EB09-BC93-00ECABA6E4FA</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

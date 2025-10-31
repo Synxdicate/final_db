@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_11" directorySegmentName="seg_0" id="7EF2D397-8474-4743-FB04-A41F7734F209">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 17:33:07 UTC</createdTime>
+<ownerDesignName>flow</ownerDesignName>
+<importedID>1C67B513-C670-9BCD-EAC0-6BD136EF8A0F</importedID>
+<engineerTo>
+<item key="904600AD-6F10-64FE-B674-3F3DB7B0FB04" value="true"/>
+</engineerTo>
+<sourcePk>09E1686E-436E-4350-4455-DB0C6BF15919</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>6E6300CD-AF32-7A14-4433-C8D40F0C4ACB</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>AA3A4049-F9CA-CBA9-7A87-9D983935B533</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

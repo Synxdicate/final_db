@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="795A6E4C-0039-F0F0-58A2-2BC79139972F" containerWithKeyObject="1E3B5B2A-7ADB-CA26-1142-C6A1F1EED190" localFKIndex="A6604C47-052F-82E7-532E-BE90FA2949C6" name="booking_customer_FK">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>B03DC10D-CE96-A469-DA5D-3403E2FB3007</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<referredTableLongName>customer</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>94CF1528-0553-6742-A7A2-5AF8E6896902</referredTableID>
+<keyObject>370DBC68-6539-EE1D-5587-78254EE39C80</keyObject>
+<referredKeyID>370DBC68-6539-EE1D-5587-78254EE39C80</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cust_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

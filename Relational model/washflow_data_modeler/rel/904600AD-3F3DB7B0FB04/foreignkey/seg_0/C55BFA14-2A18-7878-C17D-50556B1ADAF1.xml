@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C55BFA14-2A18-7878-C17D-50556B1ADAF1" containerWithKeyObject="495CE14F-1789-0D21-F54D-BE76F5E59768" localFKIndex="7DAD89AB-99C7-4878-844C-4C7BC1A2FEFC" name="vehicle_vehicle_type_FK">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>7ED9AA2E-ACE7-317A-F3D6-7373834B56BC</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<referredTableLongName>vehicle_type</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>E57C2002-F864-B07F-486A-FBCE17572668</referredTableID>
+<keyObject>A97E425C-49EF-2863-6712-7EBB14A96921</keyObject>
+<referredKeyID>A97E425C-49EF-2863-6712-7EBB14A96921</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>vtype_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

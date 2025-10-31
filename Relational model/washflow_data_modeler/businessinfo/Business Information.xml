@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="5F702CFD-9171-B89F-946C-54604845A09C">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 17:19:49 UTC</createdTime>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

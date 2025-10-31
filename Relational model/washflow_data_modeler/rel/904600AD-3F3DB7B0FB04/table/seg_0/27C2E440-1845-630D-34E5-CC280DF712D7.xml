@@ -1,0 +1,145 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="27C2E440-1845-630D-34E5-CC280DF712D7" name="employee">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>5381C874-2A3B-DAEF-EF8B-738E21267E64</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="emp_ID" id="4DBB7EC4-7DEA-77FB-5986-90D4EF595B32">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>6E7B9DAB-DB50-7608-EC78-5266809AEB3D</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="emp_fname" id="1B7E507A-43AD-D8F8-92B9-14722A089728">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>A9974345-5262-FE18-D4B9-24000F4ABF35</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="emp_lname" id="D4158872-EEB6-6AAB-557F-8FA73B8DF955">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>988EC7CE-ED5C-5BDB-CA67-E64B3CCF74FA</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="emp_address" id="7FDAAEAF-C4C7-E1B6-97C0-34EDAFD70E0C">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>2F955461-37DE-944E-ABF0-34D2A0EABDA3</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="emp_username" id="22F117D3-E81D-A667-9BFC-0F0129C45762">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>15B98DF7-094C-F5F2-F858-79DD3F4A017E</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="emp_password" id="020A1017-785B-F3EA-71C9-078C4A3E8838">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>674D2387-1009-DB7E-BF6F-444E9BB4C443</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="branch_branch_ID" id="EA63CFD2-7AEF-70AF-ECE4-051DC557350D">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>450D6D05-CC2D-657B-0A9B-BDB23CC16678</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="907398AF-5A5C-2537-63DA-CD9FD763EECB" referredColumn="4ACE91AF-57D7-DDD2-C4CA-1113B854C7CD"/>
+</associations>
+</Column>
+<Column name="position_position_ID" id="54C38AFE-9E87-0DB3-4D74-53A980AD0768">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>EB59F066-058E-CA3F-C055-C28D91ACA5B8</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0FE99D21-54D2-AD08-007E-69B48D249284" referredColumn="383DEF0E-C89C-24A3-F0C1-8870B79BB7DB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CF7B2F09-377B-31E8-87AC-DC1E417AFFDC" name="employee_PK">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>751036F1-0941-A9CB-5401-3310380E9E1A</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4DBB7EC4-7DEA-77FB-5986-90D4EF595B32"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="533A2352-9DC3-35F9-917A-D455192A0FC1" name="employee_branch_FK">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>8F5B507C-D727-3831-F6C5-96FBF010316C</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EA63CFD2-7AEF-70AF-ECE4-051DC557350D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="442F3167-6B43-7AE1-4D7B-FA6CB11CDCFC" name="employee_position_FK">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>6D3324FF-E8BC-35C4-55A4-04AFA0A86517</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="54C38AFE-9E87-0DB3-4D74-53A980AD0768"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

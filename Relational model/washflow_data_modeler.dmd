@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="washflow_data_modeler" id="6094068E-301D-37F3-3EBE-8C371F97D0E0" version="3.5">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 17:19:48 UTC</createdTime>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>6094068E-301D-37F3-3EBE-8C371F97D0E0</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="47FD5C9B-40AE-F625-2481-17DCD44FB064">
+<designStoragePath>C:\Work\carcare2</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="76A5D85D-3576-5035-B7B9-FB5195585E32">
+<designStoragePath>C:\Work\carcare2\car</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="CC003AEF-3F17-5FA6-3391-980B5C679E46">
+<designStoragePath>C:\Work\modeling</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="D3248928-B980-B3C6-171E-E5A0A57DB658">
+<designStoragePath>C:\Users\thana\Downloads\Model</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

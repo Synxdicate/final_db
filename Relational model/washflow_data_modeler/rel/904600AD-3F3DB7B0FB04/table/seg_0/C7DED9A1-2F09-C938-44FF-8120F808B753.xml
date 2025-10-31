@@ -1,0 +1,137 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C7DED9A1-2F09-C938-44FF-8120F808B753" name="service_detail">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>79134BA9-28A3-31A1-1565-280BABF791ED</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="sdetail_ID" id="119ED339-D9A3-1230-6C72-BC7BF945C313">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>95A38843-87FC-6FBE-0336-BC4C466D99A5</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sdetail_quantity" id="C903DB2B-D6B7-844A-2CE8-ECC76FA0F755">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>28723369-E3CF-8E10-2D1C-ECEA34819913</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sdetail_price" id="518446DA-37BA-9840-A578-3226B5B9D02D">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>EAF142B5-C368-A0B0-56B9-91B0FBD9BD49</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="service_service_ID" id="38576651-8AA3-86B1-8598-6E2433972E65">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>9F69A707-AB69-019B-0EDF-74F7CD5EF587</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0AA34670-E542-D7A7-5717-67497E6CB29F" referredColumn="3C43E599-ADF9-38CB-A813-EC558DBFB4EC"/>
+</associations>
+</Column>
+<Column name="employee_emp_ID" id="32CECC52-FB0C-4E75-8A1B-02228237226D">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>36466FA4-8599-9FAC-A75A-C81428B1C2F0</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1CB06971-ED65-B1B4-C264-702918B21532" referredColumn="4DBB7EC4-7DEA-77FB-5986-90D4EF595B32"/>
+</associations>
+</Column>
+<Column name="Service_type_service_typeID" id="AB916EB3-BA04-0AB2-17BE-E04F5786C106">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>E97BF8DE-284B-0CBA-46DE-797FC5516D93</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="475FA1EB-4B45-17CE-F413-2A03DA3D5296" referredColumn="9B02FE2F-ED60-8D5C-9E6D-DB69BD4F1F1F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3176F273-14DA-C8F2-B0E7-5F5BC52B5DBB" name="service_detail_PK">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>9252DC65-0502-330E-C81A-6A91E84CADA0</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="119ED339-D9A3-1230-6C72-BC7BF945C313"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E96E9BA3-6646-54D9-02C4-472165D341B1" name="service_detail_service_FK">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>0B2F5DE9-511F-C00A-50CA-EF08F4DB5EAE</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="38576651-8AA3-86B1-8598-6E2433972E65"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7940685C-0C0B-6AE8-B6C1-68E95BC02DDC" name="service_detail_employee_FK">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>19120DD1-72C5-5249-B60C-670AE1337993</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="32CECC52-FB0C-4E75-8A1B-02228237226D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="818746EB-93AA-6EDB-F848-992300AD76F1" name="service_detail_Service_type_FK">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>89FD5E4F-3A96-2D0B-AE52-CB1E9F288444</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AB916EB3-BA04-0AB2-17BE-E04F5786C106"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

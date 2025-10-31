@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="19F69335-43A2-4749-F656-85B9A05D18B4" name="payment">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>17D676A8-6FF0-C1E4-1117-7E66B467C35B</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="payment_ID" id="7720A9D5-AADC-6C39-8DA3-BF317ED090C0">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>9AA14449-A975-7A90-2CA4-45A3FDD4D388</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="payment_amount" id="21F52547-BF0C-CE77-4FAD-15EAF548660B">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>5FF94D1D-5BA1-2973-D074-BE92B67C16ED</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="payment_date" id="98124708-02A3-EBAB-6626-81E2D19AF32B">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>15566ED5-0D10-3317-C142-AF62652ED329</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="payment_method" id="4BB988EF-58D0-21F4-D0E2-16BC4D9A025B">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>5BA5A794-D9DA-FF28-32B4-43F1D8E1E141</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="booking_booking_ID" id="85EC7293-C73B-8910-BB3D-0F98E4ACA2E2">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>D498D939-96FA-C517-B1AF-1EF733F30689</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="01831A4E-EE2D-151E-D715-9AF332C96DDD" referredColumn="D2BFE1B3-E8B2-6BE2-2B5D-D246566A21AA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="30169C12-B011-D2BD-D223-DBEBCA0FEF00" name="payment_PK">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>390796E1-1238-B0D9-02C0-48F580FB51E0</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7720A9D5-AADC-6C39-8DA3-BF317ED090C0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8AE85273-B5C3-7D37-95F7-349B006B1CAB" name="payment_booking_FK">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>05914214-B816-8ADB-0497-B1FB9F05B3EC</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="85EC7293-C73B-8910-BB3D-0F98E4ACA2E2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
