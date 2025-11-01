@@ -94,8 +94,7 @@ CREATE TABLE booking (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
-    FOREIGN KEY (cust_ID) REFERENCES customer(cust_ID),
-    FOREIGN KEY (branch_ID) REFERENCES branch(branch_ID)
+    FOREIGN KEY (cust_ID) REFERENCES customer(cust_ID)
 );
 
 
