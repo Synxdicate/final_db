@@ -5,12 +5,12 @@ DROP TABLE IF EXISTS payment;
 DROP TABLE IF EXISTS booking;
 DROP TABLE IF EXISTS vehicle;
 DROP TABLE IF EXISTS vehicle_type;
-DROP TABLE IF EXISTS Membership;
+DROP TABLE IF EXISTS membership;
 DROP TABLE IF EXISTS employee;
-DROP TABLE IF EXISTS position;
+DROP TABLE IF EXISTS role;
 DROP TABLE IF EXISTS branch;
 DROP TABLE IF EXISTS customer;
-DROP TABLE IF EXISTS Service_type;
+DROP TABLE IF EXISTS service_type;
 
 USE washflow; 
 
@@ -30,10 +30,10 @@ CREATE TABLE customer (
     cust_password VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE employee_position (
-    pos_ID INT PRIMARY KEY AUTO_INCREMENT,
-    pos_name VARCHAR(100) NOT NULL UNIQUE,
-    pos_salary DECIMAL(10,2) NOT NULL  
+CREATE TABLE role (
+    role_ID INT PRIMARY KEY AUTO_INCREMENT,
+    role_name VARCHAR(100) NOT NULL UNIQUE,
+    role_salary DECIMAL(10,2) NOT NULL  
 );
 
 CREATE TABLE employee (
@@ -44,10 +44,10 @@ CREATE TABLE employee (
     emp_username VARCHAR(50) NOT NULL UNIQUE,
     emp_password VARCHAR(255) NOT NULL,
     branch_ID INT NOT NULL,
-    pos_ID INT NOT NULL,
+    role_ID INT NOT NULL,
 
     FOREIGN KEY (branch_ID) REFERENCES branch(branch_ID),
-    FOREIGN KEY (pos_ID) REFERENCES employee_position(pos_ID)
+    FOREIGN KEY (role_ID) REFERENCES role(role_ID)
 );
 
 CREATE TABLE vehicle_type (
@@ -72,7 +72,6 @@ CREATE TABLE membership (
     FOREIGN KEY (cust_ID) REFERENCES customer(cust_ID)
 );
 
-
 CREATE TABLE vehicle (
     vehicle_ID INT PRIMARY KEY AUTO_INCREMENT,
     vehicle_plate VARCHAR(20) NOT NULL UNIQUE, 
@@ -81,22 +80,19 @@ CREATE TABLE vehicle (
     vehicletype_ID INT NOT NULL,
 
     FOREIGN KEY (cust_ID) REFERENCES customer(cust_ID),
-    FOREIGN KEY (vehicletype_ID ) REFERENCES vehicle_type(vehicletype_ID)
+    FOREIGN KEY (vehicletype_ID) REFERENCES vehicle_type(vehicletype_ID)
 );
-
 
 CREATE TABLE booking (
     booking_ID INT PRIMARY KEY AUTO_INCREMENT,
     booking_date DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL, 
     booking_status VARCHAR(50) DEFAULT 'pending' NOT NULL, 
     cust_ID INT NOT NULL,
-    branch_ID INT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
     FOREIGN KEY (cust_ID) REFERENCES customer(cust_ID)
 );
-
 
 CREATE TABLE payment (
     payment_ID INT PRIMARY KEY AUTO_INCREMENT,
@@ -107,7 +103,6 @@ CREATE TABLE payment (
 
     FOREIGN KEY (booking_ID) REFERENCES booking(booking_ID)
 );
-
 
 CREATE TABLE service (
     service_ID INT PRIMARY KEY AUTO_INCREMENT,
@@ -121,7 +116,6 @@ CREATE TABLE service (
     FOREIGN KEY (vehicle_ID) REFERENCES vehicle(vehicle_ID)
 );
 
-
 CREATE TABLE receipt (
     receipt_ID INT PRIMARY KEY AUTO_INCREMENT,
     receipt_number VARCHAR(20) NOT NULL UNIQUE,  
@@ -131,7 +125,6 @@ CREATE TABLE receipt (
 
     FOREIGN KEY (payment_ID) REFERENCES payment(payment_ID)
 );
-
 
 CREATE TABLE service_detail (
     sdetail_ID INT PRIMARY KEY AUTO_INCREMENT,
@@ -190,25 +183,26 @@ FROM customer c
 JOIN vehicle v ON c.cust_ID = v.cust_ID
 JOIN vehicle_type vt ON v.vehicletype_ID = vt.vehicletype_ID;
 
--- 3. Employee Branch Position View (แก้จาก role เป็น position)
+-- 3. Employee Branch Role View
 CREATE VIEW employee_branch_role_view AS
 SELECT 
     e.emp_ID,
     CONCAT(e.emp_fname, ' ', e.emp_lname) AS employee_name,
     e.emp_address,
     e.emp_username,
-    p.pos_name,
-    p.pos_salary,
+    r.role_name,
+    r.role_salary,
     b.branch_name,
     b.branch_address,
-    b.branch_ID
+    b.branch_ID,
+    r.role_ID
 FROM employee e
 JOIN branch b ON e.branch_ID = b.branch_ID
-JOIN employee_position p ON e.pos_ID = p.pos_ID;
+JOIN role r ON e.role_ID = r.role_ID;
 
 -- 4. Booking Summary View
 CREATE VIEW booking_summary_view AS
-SELECT 
+SELECT DISTINCT
     b.booking_ID,
     b.booking_date,
     b.booking_status,
@@ -222,11 +216,14 @@ SELECT
     br.branch_ID
 FROM booking b
 JOIN customer c ON b.cust_ID = c.cust_ID
-JOIN branch br ON b.branch_ID = br.branch_ID;
+LEFT JOIN service s ON b.booking_ID = s.booking_ID
+LEFT JOIN service_detail sd ON s.service_ID = sd.service_ID
+LEFT JOIN employee e ON sd.emp_ID = e.emp_ID
+LEFT JOIN branch br ON e.branch_ID = br.branch_ID;
 
 -- 5. Service Progress View
 CREATE VIEW service_progress_view AS
-SELECT 
+SELECT DISTINCT
     s.service_ID,
     s.service_status,
     s.service_startdate,
@@ -244,11 +241,13 @@ JOIN vehicle v ON s.vehicle_ID = v.vehicle_ID
 JOIN vehicle_type vt ON v.vehicletype_ID = vt.vehicletype_ID
 JOIN booking b ON s.booking_ID = b.booking_ID
 JOIN customer c ON b.cust_ID = c.cust_ID
-JOIN branch br ON b.branch_ID = br.branch_ID;
+LEFT JOIN service_detail sd ON s.service_ID = sd.service_ID
+LEFT JOIN employee e ON sd.emp_ID = e.emp_ID
+LEFT JOIN branch br ON e.branch_ID = br.branch_ID;
 
 -- 6. Payment Receipt View
 CREATE VIEW payment_receipt_view AS
-SELECT 
+SELECT DISTINCT
     p.payment_ID,
     p.payment_amount,
     p.payment_date,
@@ -264,8 +263,11 @@ SELECT
 FROM payment p
 LEFT JOIN receipt r ON p.payment_ID = r.payment_ID
 JOIN booking b ON p.booking_ID = b.booking_ID
-JOIN branch br ON b.branch_ID = br.branch_ID
-JOIN customer c ON b.cust_ID = c.cust_ID;
+JOIN customer c ON b.cust_ID = c.cust_ID
+LEFT JOIN service s ON b.booking_ID = s.booking_ID
+LEFT JOIN service_detail sd ON s.service_ID = sd.service_ID
+LEFT JOIN employee e ON sd.emp_ID = e.emp_ID
+LEFT JOIN branch br ON e.branch_ID = br.branch_ID;
 
 -- 7. Service Detail Summary View
 CREATE VIEW service_detail_summary_view AS
@@ -277,20 +279,22 @@ SELECT
     sd.sdetail_quantity,
     sd.sdetail_price,
     CONCAT(e.emp_fname, ' ', e.emp_lname) AS employee_name,
+    e.emp_ID,
     v.vehicle_plate,
     v.vehicle_color,
     vt.vehicletype_name,
     br.branch_name,
     br.branch_ID,
-    CONCAT(c.cust_fname, ' ', c.cust_lname) AS customer_name
+    CONCAT(c.cust_fname, ' ', c.cust_lname) AS customer_name,
+    c.cust_ID
 FROM service_detail sd
 JOIN service_type st ON sd.serviceType_ID = st.serviceType_ID
 JOIN employee e ON sd.emp_ID = e.emp_ID
+JOIN branch br ON e.branch_ID = br.branch_ID
 JOIN service s ON sd.service_ID = s.service_ID
 JOIN vehicle v ON s.vehicle_ID = v.vehicle_ID
 JOIN vehicle_type vt ON v.vehicletype_ID = vt.vehicletype_ID
 JOIN booking b ON s.booking_ID = b.booking_ID
-JOIN branch br ON b.branch_ID = br.branch_ID
 JOIN customer c ON b.cust_ID = c.cust_ID;
 
 -- 8. Branch Booking Count View
@@ -299,12 +303,15 @@ SELECT
     b.branch_ID,
     b.branch_name,
     b.branch_address,
-    COUNT(bk.booking_ID) AS total_bookings,
+    COUNT(DISTINCT bk.booking_ID) AS total_bookings,
     SUM(CASE WHEN bk.booking_status = 'completed' THEN 1 ELSE 0 END) AS completed_bookings,
     SUM(CASE WHEN bk.booking_status = 'pending' THEN 1 ELSE 0 END) AS pending_bookings,
     SUM(CASE WHEN bk.booking_status = 'cancelled' THEN 1 ELSE 0 END) AS cancelled_bookings
 FROM branch b
-LEFT JOIN booking bk ON b.branch_ID = bk.branch_ID
+LEFT JOIN employee e ON b.branch_ID = e.branch_ID
+LEFT JOIN service_detail sd ON e.emp_ID = sd.emp_ID
+LEFT JOIN service s ON sd.service_ID = s.service_ID
+LEFT JOIN booking bk ON s.booking_ID = bk.booking_ID
 GROUP BY b.branch_ID, b.branch_name, b.branch_address;
 
 -- 9. Service Type Pricing View
@@ -323,7 +330,7 @@ ORDER BY st.serviceType_Name, vt.vehicletype_name;
 
 -- 10. Active Services View
 CREATE VIEW active_services_view AS
-SELECT 
+SELECT DISTINCT
     s.service_ID,
     CONCAT(c.cust_fname, ' ', c.cust_lname) AS customer_name,
     c.cust_tel,
@@ -339,5 +346,7 @@ JOIN vehicle v ON s.vehicle_ID = v.vehicle_ID
 JOIN vehicle_type vt ON v.vehicletype_ID = vt.vehicletype_ID
 JOIN booking b ON s.booking_ID = b.booking_ID
 JOIN customer c ON b.cust_ID = c.cust_ID
-JOIN branch br ON b.branch_ID = br.branch_ID
+LEFT JOIN service_detail sd ON s.service_ID = sd.service_ID
+LEFT JOIN employee e ON sd.emp_ID = e.emp_ID
+LEFT JOIN branch br ON e.branch_ID = br.branch_ID
 WHERE s.service_status = 'in_progress';
