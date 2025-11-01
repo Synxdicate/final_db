@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E57C2002-F864-B07F-486A-FBCE17572668" name="vehicle_type">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>6AC469F1-DAC7-2863-49F5-0622CC465205</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="vtype_ID" id="C8B6A173-364A-8918-44E4-716E05593A23">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>9BD9AF5B-D479-20DE-0A8A-31C1803D8DF4</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="vtype_name" id="D981169E-AF09-569C-C897-B13BD71902D0">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>E697A6C3-921F-E4FB-F34C-585ADD73FB15</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="vtype_multiplier" id="F5F9891A-DDFD-A729-1E17-8552FA7F3659">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>D77498A7-F6F1-E924-1EA0-E3CA979219F6</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,3,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A97E425C-49EF-2863-6712-7EBB14A96921" name="vehicle_type_PK">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>D3B79994-DF09-2548-A3C5-0AD1243F03EC</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C8B6A173-364A-8918-44E4-716E05593A23"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_29" directorySegmentName="seg_0" id="6D3324FF-E8BC-35C4-55A4-04AFA0A86517">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:32:59 UTC</createdTime>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<engineerTo>
+<item key="904600AD-6F10-64FE-B674-3F3DB7B0FB04" value="true"/>
+</engineerTo>
+<sourcePk>5DC9D9FE-D603-31CE-8FE6-270B93DA4C82</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>31ABDA0F-FCEA-D391-7F0B-E38BCEAF6504</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>5381C874-2A3B-DAEF-EF8B-738E21267E64</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

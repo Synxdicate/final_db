@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="94CF1528-0553-6742-A7A2-5AF8E6896902" name="customer">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>E0949404-0852-2F0F-03CE-D1604355514E</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cust_ID" id="220D405F-F88D-47CE-5A58-7D09C40F89F0">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>44C8F852-EDC2-53F1-AD77-BB41AAA9139C</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_fname" id="3C2FC263-1290-B4B6-C953-05C78C80A597">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>033A402D-EA65-4274-7300-FB17F4A385A6</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_lname" id="932BF073-58F3-1EA8-4C7A-D86FA376EA76">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>9CDAA691-74BB-C5D8-CEE6-784AD37040CA</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_tel" id="3297C135-F60E-8D10-A8AB-A4DE1559383B">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>AB6A9093-8C7A-AA75-F790-9CCAD2FA3F0B</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_address" id="0B30F084-12A0-8A38-43AC-77B9BEA0726D">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>8D3F1700-34C7-1157-FC69-C68E33D97C91</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_username" id="10DAF18C-8B41-7952-258B-EEC145E5A61D">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>9FB59CAE-D6F4-D757-BF1A-772D48D4E0DD</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_password" id="BE73407B-A6C9-11D9-0B31-2BF397992358">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>714FAC2C-EED1-6FD9-B1C0-57C94AF05B72</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="370DBC68-6539-EE1D-5587-78254EE39C80" name="customer_PK">
+<createdBy>thana</createdBy>
+<createdTime>2025-10-31 18:45:44 UTC</createdTime>
+<generatorID>0DC792A8-752C-02D1-23C9-3DC9AB2727F3</generatorID>
+<ownerDesignName>washflow_data_modeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="220D405F-F88D-47CE-5A58-7D09C40F89F0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
