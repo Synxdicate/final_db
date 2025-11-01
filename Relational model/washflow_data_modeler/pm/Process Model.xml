@@ -1,7 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="BBCC98D3-953D-BAD6-7E98-708C7A07B284">
-<createdBy>thana</createdBy>
-<createdTime>2025-10-31 17:19:49 UTC</createdTime>
-<ownerDesignName>washflow_data_modeler</ownerDesignName>
-<shouldBeOpen>false</shouldBeOpen>
-</ProcessModel>
